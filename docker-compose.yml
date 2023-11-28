@@ -1,0 +1,62 @@
+version: '1.0'
+services:
+  app:
+    # image: test-image-flask
+    build: ./Api
+    container_name: flask-api
+    restart: always
+    env_file:
+      - ".env"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - database
+      - adminer
+      - redis
+
+  worker:
+    # image: test-image-flask
+    build: ./Api
+    container_name: celery-worker
+    command: celery --workdir ./util/ --app celery worker --loglevel=info
+    restart: always
+    env_file:
+      - ".env"
+    depends_on:
+      - app
+      - redis
+
+  # web:
+  #   # image: nginx:stable-alpine
+  #   build: ./Web
+  #   container_name: web-app
+  #   restart: always
+  #   ports:
+  #     - "80:80"
+
+  database:
+    image: postgres:14
+    container_name: db-postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: eightweeks
+      POSTGRES_PASSWORD: eweeks32
+      POSTGRES_DB: fashioncampus
+  
+  adminer:
+    image: adminer
+    container_name: my-adminer
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - 8080:8080
+  
+  redis:
+    image: redis:6-alpine
+    container_name: redis
+    restart: always
+    ports:
+      - 6379:6379

@@ -1,0 +1,6 @@
+fashion-campus-venv/
+*.pyc
+__pycache__/
+.env
+fashion-campus-firebase-adminsdk-u6ode-45a90533e5.json
+google-service-cred.json

@@ -1,0 +1,39 @@
+image: python:3.9-slim
+
+variables:
+  ENVIRONMENT_NAME: final-project-sc-backend
+
+stages:
+  - test
+
+before_script:
+  - python --version # For debugging
+  - python3.9 -m pip install virtualenv
+  - python3.9 -m venv $ENVIRONMENT_NAME
+  - source $ENVIRONMENT_NAME/bin/activate
+  - python3.9 -m pip install -r Api/req.txt
+  - pwd && ls # for debugging
+
+final-project-test:
+  stage: test
+  variables:
+    POSTGRES_USER:  "jeezy"
+    POSTGRES_PASSWORD: "jeezy"
+    POSTGRES_HOST: "35.240.159.32"
+    POSTGRES_DB: "fp_dev"
+    POSTGRES_PORT: 4321
+    JWT_TOKEN_KEY: "supersecretpassword"
+    JWT_EXPIRATION_TIME_IN_MINUTES: 60
+    GCS_CREDENTIALS: "google-service-cred.json"
+    GCS_BUCKET: "fina_project_sc"
+  resource_group: testing
+  script:
+    - python3.9 Api/Tests/universal_test.py
+    - python3.9 Api/Tests/home_test.py
+    - python3.9 Api/Tests/auth_test.py
+    - python3.9 Api/Tests/product_list_test.py
+    - python3.9 Api/Tests/product_detail_test.py
+    - python3.9 Api/Tests/cart_test.py
+    - python3.9 Api/Tests/profile_test.py
+    - python3.9 Api/Tests/admin_test.py
+  
