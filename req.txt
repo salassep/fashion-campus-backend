@@ -13,7 +13,7 @@ numpy==1.23.4
 matplotlib==3.6.2
 pandas==1.5.1
 Pillow==9.3.0
-sklearn==0.0.post1
+scikit-learn
 firebase-admin
 Werkzeug==2.2.2
 python-dotenv
