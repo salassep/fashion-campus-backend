@@ -6,9 +6,6 @@ The Campus Fashion Company presents a catalog of local to international brands t
 They found that during this pandemic new trends emerged among the Fashion Campus target market. Apparently, "Indonesian Young Urbans" began to practice thrifting or buying and selling used clothes.
 
 
-![Logo](http://34.143.167.23:5000/image/banner-1.jpg)
-
-
 ## BE EightWeeks
 
 - [@yovixtar](https://gitlab.com/yovixtar) - Khazim Fikri Al-Fadhli
@@ -32,8 +29,6 @@ They found that during this pandemic new trends emerged among the Fashion Campus
 **Server:** Google Cloud, Docker, Flask (Python), PostgreSQL (SQLAlchemy)
 
 **Git Repository:** GitLab
-
-![Logo](http://34.143.167.23:5000/image/readme-tech-tools.png)
 
 
 ## Installation
