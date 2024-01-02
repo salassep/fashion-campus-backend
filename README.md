@@ -6,20 +6,30 @@ The Campus Fashion Company presents a catalog of local to international brands t
 They found that during this pandemic new trends emerged among the Fashion Campus target market. Apparently, "Indonesian Young Urbans" began to practice thrifting or buying and selling used clothes.
 
 
+![Logo](http://34.143.167.23:5000/image/banner-1.jpg)
+
+
 ## BE EightWeeks
 
 - [@yovixtar](https://gitlab.com/yovixtar) - Khazim Fikri Al-Fadhli
 - [@salassep](https://gitlab.com/salassep) - Salas Sepkardianto
 
 
+## AI EightWeeks
+
+- [@williamjuniar](https://gitlab.com/williamjuniar) - William Juniar
+- [@MrMorries](https://gitlab.com/MrMorries) - Immanuel Morries Pohan
+
+
 ## Resource
 
  - [GitLab Backend](https://gitlab.com/yovixtar/final-project-eightweeks)
  - [GitLab Frontend](https://gitlab.com/yovixtar/final-project-frontend)
- - [ERD](https://lucid.app/lucidchart/4eeacc26-027e-4677-a365-928518164ade/edit?viewport_loc=-1440%2C-430%2C5679%2C2665%2C0_0&invitationId=inv_8d8cc50d-0055-44e4-8c95-64d4c42ef554)
+ - [ERD](http://34.143.167.23:5000/image/erd-fashioncampus-eightweeks.png)
  - [Backend URL](http://34.143.167.23:5000/)
  - [Frontend URL](http://34.143.167.23:3000/)
  - [Adminer - Database Manager](http://34.143.167.23:8080/)
+ - [Daftar Endpoint](https://docs.google.com/spreadsheets/d/1sqWOeTGJi86w5DaIDmvuwWGxXzIekYUm_eVYPth9Oy0/edit?usp=sharing)
  
 
 ## Tech Stack
@@ -29,6 +39,8 @@ They found that during this pandemic new trends emerged among the Fashion Campus
 **Server:** Google Cloud, Docker, Flask (Python), PostgreSQL (SQLAlchemy)
 
 **Git Repository:** GitLab
+
+![Logo](http://34.143.167.23:5000/image/readme-tech-tools.png)
 
 
 ## Installation
@@ -122,6 +134,7 @@ Before Script:
 - Show Status Product & Category
 - Status Product & Category management
 - Banner management
+- New Arrival Products
 
 
 ## License
